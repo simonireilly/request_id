@@ -1,0 +1,9 @@
+version: '3.6'
+
+services:
+  ruby:
+    image: ruby:2.5.7
+    volumes:
+      - .:/app:delegated
+    working_dir: /app
+    command: bash -c "bundle install && bundle exec rspec"
